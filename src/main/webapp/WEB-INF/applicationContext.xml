@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:data="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/data/jpa
+    	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<context:component-scan
+		base-package="com.eintern.spring.hellospringjersey.model.delegate" />
+	<context:component-scan base-package="com.eintern.spring.hellospringjersey.service" />
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<data:repositories base-package="com.eintern.spring.hellospringjersey.data.dao" />
+	<bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource"
+		destroy-method="close">
+		<property name="URL" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="user" value="jl" />
+		<property name="password" value="manager" />
+	</bean>
+	
+
+	<bean class="org.springframework.orm.jpa.JpaTransactionManager"
+		id="transactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+		<property name="jpaDialect">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+		</property>
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.eintern.spring.hellospringjersey.data.entity" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="generateDdl" value="false" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation">
+			<value> classpath:hibernate.cfg.xml </value>
+		</property>
+	</bean>
+</beans>

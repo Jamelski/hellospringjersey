@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+		margin:0;
+		padding:0;
+	}
+	
+	#container{
+		margin-right: auto;
+	    margin-left: auto;
+	    float: none;
+	    width: 640px;
+	}
+	
+	#wrapper{
+		background-image:url(../images/background-640.png);
+		width:640px;
+		height:100%;
+		padding-bottom:15px;
+		margin-left:auto;
+		margin-right:auto;
+		position:relative;
+		float: left;
+		
+	}
+	
+	.transparent{
+		width:640px;
+		height:150px;
+		background-color:#FFFFFF;
+		opacity:0.35;
+		position:fixed;
+	}
+	
+	.logo{
+		background-image:url(../images/logo-640_08.png);
+		width:303px;
+		height:114px;
+		position:fixed;
+	}
+	
+	.wrap-logo{
+		position:absolute;
+		left:20px;
+		top:15px;
+		width:303px;
+		height:114px;
+	}
+	
+	.wrap-icon{
+		position: absolute;
+		right: 55px;
+    	top: 45px;
+		width:76px;
+		height:51px;
+	}
+	
+	.menu-icon{
+		background-image:url(../images/menu-icon-640.png);
+		width:76px;
+		height:51px;
+		position: fixed;
+	}
+	
+	.page-title{
+		margin-top:150px;
+		height:65px;
+		width:640px;
+		text-align:center;
+		font-size:48px;
+		background-color:#d1e9d2;
+		color:#908fb3;
+		padding-top:15px;
+		font-family:Helvetica;
+		font-weight:bold;
+		float:left;
+	}
+	
+	.sub-content{
+		margin-top:50px;
+		width:550px;
+		height:376px;
+		margin-left:45px;
+		margin-right:45px;
+		background-color:#FFFFFF;
+		float:left;
+	}
+	
+	.sub-title{
+		color:#6a6666;
+		font-family:Helvetica;
+		margin-top:15px;
+		margin-left:20px;
+		font-weight:bold;
+	}
+	
+	@media screen and (max-width: 480px){
+		#container{
+			width:320px;
+		}
+		
+		#wrapper{
+			background-image:url(../images/background-320.png);
+			width:320px;
+		}
+		
+		.transparent{
+			width:320px;
+			height:75px;
+		}
+		
+		.wrap-logo{
+			position:absolute;
+			left:0;
+			top:0;
+			width:303px;
+			height:114px;
+		}
+		
+		.logo{
+			background-image:url(../images/logo-320_03.png);
+			width:151px;
+			height:56px;
+			margin-left:10px;
+			margin-top:10px;
+		}
+		
+		.wrap-icon{
+			width:38px;
+			height:26px;
+			right:30px;
+			top:25px;
+		}
+		
+		.menu-icon{
+			background-image:url(../images/Logical-Logistics-Template-320_03.png);
+		width:38px;
+		height:26px;
+		}
+		
+		.page-title{
+			margin-top:75px;
+			height:32px;
+			width:320px;
+			text-align:center;
+			font-size:24px;
+			padding-top:8px;
+		}
+		
+		.sub-content{
+			margin-top:25px;
+			width:270px;
+			height:188px;
+			margin-left:25px;
+			margin-right:25px;
+		}
+		
+		.sub-title{
+			
+		}
+	}
