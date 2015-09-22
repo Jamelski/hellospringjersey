@@ -10,7 +10,7 @@ import com.eintern.spring.hellospringjersey.data.entity.Employee;
 import com.eintern.spring.hellospringjersey.model.delegate.EmployeeDelegate;
 
 @Controller
-@RequestMapping("/employee")
+@RequestMapping("/employee**")
 public class EmployeeController {
 	
 	@Autowired
