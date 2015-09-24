@@ -93,16 +93,16 @@
         
         <nav id="my-menu">
             <ul>
-               <li><a href="/hellospringjersey/do/item/viewItems">Item</a>
+               <li><a href="/hellospringjersey/do/user/item/viewItems">Item</a>
                		<ul>
-               			<li><a href="/hellospringjersey/do/item/viewItems">View Items</a></li>
-               			<li><a href="/hellospringjersey/do/item/request">Add Item</a></li>
+               			<li><a href="/hellospringjersey/do/user/item/viewItems">View Items</a></li>
+               			<li><a href="/hellospringjersey/do/user/item/request">Add Item</a></li>
                		</ul>
                </li>
-               <li><a href="/hellospringjersey/do/logisticslead/viewWarehouses">Warehouse</a>
+               <li><a href="/hellospringjersey/do/user/logisticslead/viewWarehouses">Warehouse</a>
                		<ul>
-               			<li><a href="/hellospringjersey/do/logisticslead/viewWarehouses">View Warehouses</a></li>
-               			<li><a href="/hellospringjersey/do/logisticslead/request">Add Warehouse</a></li>
+               			<li><a href="/hellospringjersey/do/user/logisticslead/viewWarehouses">View Warehouses</a></li>
+               			<li><a href="/hellospringjersey/do/user/logisticslead/request">Add Warehouse</a></li>
                		</ul>
                </li>
             </ul>

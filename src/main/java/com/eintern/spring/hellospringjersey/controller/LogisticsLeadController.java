@@ -17,7 +17,7 @@ import com.eintern.spring.hellospringjersey.data.entity.Warehouse;
 import com.eintern.spring.hellospringjersey.model.delegate.LogisticsLeadDelegate;
 
 @Controller
-@RequestMapping("/logisticslead")
+@RequestMapping("/user/logisticslead")
 public class LogisticsLeadController {
 	@Autowired
 	private LogisticsLeadDelegate leadDelegate;

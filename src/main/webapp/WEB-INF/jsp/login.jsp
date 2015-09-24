@@ -141,10 +141,11 @@
         <div class="main-content">
         	<div class="sub-content">
             	<form class="my-form" name='loginForm'
-				action="<c:url value='/j_spring_security_check'/>" method="POST">
+				action="<c:url value='/login'/>" method="POST">
 					<div class="form-group">
 						<input  placeholder="Email" class="form-control" type="email" name="username"/>
 						<input  placeholder="Password" class="form-control" type="password" name="password"/>
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 						<button class="submit-button" type="submit">Login</button>
 					</div>
 				</form>

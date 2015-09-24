@@ -42,7 +42,7 @@ import com.eintern.spring.hellospringjersey.model.delegate.ItemDelegate;
 import com.eintern.spring.hellospringjersey.model.delegate.WarehouseDelegate;
 
 @Controller
-@RequestMapping("/item")
+@RequestMapping("/user/item")
 public class ItemController {
 	@Autowired
 	private ItemDelegate itemDelegate;

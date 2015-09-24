@@ -13,7 +13,7 @@ import com.eintern.spring.hellospringjersey.data.entity.Greeting;
 import com.eintern.spring.hellospringjersey.model.delegate.GreetingDelegate;
 
 @Controller
-@RequestMapping("/greeting")
+@RequestMapping("/user/greeting")
 public class GreetingController {
 	@Autowired
 	private GreetingDelegate greetingDelegate;
